@@ -91,7 +91,7 @@ public class RestUtils {
 		OkHttpClient client = new OkHttpClient();
 
 		Request getSchedule = new Request.Builder()
-				.url("https://www.easistent.com/m/timetable/weekly")
+				.url("https://www.easistent.com/m/timetable/weekly?from=2021-05-24&to=2021-05-30")
 				.addHeader("authorization", bearerToken)
 				.addHeader("x-child-id", childId)
 				.addHeader("x-client-platform", "web")

@@ -33,21 +33,7 @@ public class JEA {
 	}
 
 	public void klic() {
-		ArrayList<Subject> sub = RestUtils.getGrades(bearerToken, childId);
-
-		for(Subject subject : sub) {
-			System.out.println(subject.getName());
-
-			for(Semester sem : subject.getSemesters()) {
-				System.out.println(sem.getId());
-
-				for(Grade grade : sem.getGrades()) {
-					System.out.println(grade.getComment() + " : " + grade.getValue());
-				}
-			}
-
-			System.out.println("\n\n");
-		}
+		System.out.println(RestUtils.getSchedule(bearerToken, childId));
 	}
 
 	private void getAccessToken() throws IncorrectCredentialsException {
